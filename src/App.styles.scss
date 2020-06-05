@@ -1,0 +1,13 @@
+body {
+  font-family: 'Menlo';
+  padding: 20px 60px;
+}
+
+.container{
+  // padding: 8rem 4rem 6rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: start;
+  padding-top: 5rem;
+}

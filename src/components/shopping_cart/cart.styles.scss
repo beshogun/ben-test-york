@@ -1,0 +1,42 @@
+.cart_container{
+
+}
+
+.title__box{
+    padding-left: 3rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.cart__box{
+    padding-top: 3rem;
+}
+.cart__footer{
+    display: grid;
+    
+    padding-left: 3rem;
+}
+.icon__box{
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    grid-template-columns: .02fr 1.9fr 1fr;
+}
+.continue{
+    color: lightskyblue;
+}
+.total{
+    align-items: center;
+    display: grid;
+    grid-template-columns: .1fr .1fr;
+    &-title{
+        font-size: .8rem;
+        font-weight: bold;
+        color: lightslategray;
+
+    }
+    &-amount{
+        font-weight: bold;
+        font-size: 1.2rem;
+
+    }
+}
