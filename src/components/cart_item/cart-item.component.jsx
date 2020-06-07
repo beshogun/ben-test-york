@@ -19,13 +19,12 @@ const CartItem = ({ item }) => {
   const onChange = (e) => {
     e.preventDefault();
     const reg = /^[0-9\b]+$/;
-    if (e.target.value === '' || reg.test(e.target.value)) {
-        if (parseInt(e.target.value) === 0) {
-            deleteCartItem({ ...item });
-          }
-          setCart({ ...item, quantity: e.target.value });
-     }
-    
+    if (e.target.value === "" || reg.test(e.target.value)) {
+      if (parseInt(e.target.value) === 0) {
+        deleteCartItem({ ...item });
+      }
+      setCart({ ...item, quantity: e.target.value });
+    }
   };
   const increment = () => {
     setCart({ ...item, quantity: item.quantity + 1 });
@@ -33,14 +32,13 @@ const CartItem = ({ item }) => {
 
   const decrement = () => {
     if (quantity === 0) {
-        deleteCartItem({ ...item });
-      }
+      deleteCartItem({ ...item });
+    }
     setCart({ ...item, quantity: item.quantity - 1 });
   };
 
   const deleteItem = () => {
     deleteCartItem({ ...item });
-    // getTotal(cart.reduce((r, d) => r + d.price * d.quantity, 0))
   };
 
   return (

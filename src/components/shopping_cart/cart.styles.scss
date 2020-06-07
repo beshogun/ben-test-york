@@ -1,9 +1,4 @@
-.cart_container{
-
-}
-
 .title__box{
-    // padding-left: 3rem;
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -13,15 +8,10 @@
 .cart__footer{
     display: grid;
     grid-template-columns: 2fr .1fr;
-
-    // padding-right: 3rem;
-
-    // padding-left: 3rem;
 }
 .icon__box{
     display: grid;
     align-items: center;
-    // justify-content: start;
     grid-template-columns: .01fr .35fr 1.1fr;
 }
 .continue{
@@ -30,10 +20,8 @@
 .total{
     align-items: center;
     display: grid;
-    // padding-left: 2rem;
     justify-content: end;
     grid-template-columns: .1fr .1fr;
-    // padding-right: 3rem;
     &-title{
         font-size: .8rem;
         font-weight: bold;
