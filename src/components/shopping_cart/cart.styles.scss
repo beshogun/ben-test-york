@@ -12,7 +12,7 @@
 }
 .cart__footer{
     display: grid;
-    grid-template-columns: .9fr .1fr;
+    grid-template-columns: 2fr .1fr;
 
     // padding-right: 3rem;
 
@@ -21,8 +21,8 @@
 .icon__box{
     display: grid;
     align-items: center;
-    justify-content: start;
-    grid-template-columns: .02fr 1.9fr 1fr;
+    // justify-content: start;
+    grid-template-columns: .01fr .35fr 1.1fr;
 }
 .continue{
     color: lightskyblue;
@@ -30,6 +30,7 @@
 .total{
     align-items: center;
     display: grid;
+    // padding-left: 2rem;
     justify-content: end;
     grid-template-columns: .1fr .1fr;
     // padding-right: 3rem;

@@ -1,62 +1,45 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import CartContext from "../../context/cart/cartContext";
 
 import "./cart-item.styles.scss";
 
 const CartItem = ({ item }) => {
   const cartContext = useContext(CartContext);
-  const { cart, setCart, getTotal, setCurrent } = cartContext;
+  const { cart, setCart, deleteCartItem } = cartContext;
   const { image, price, name, serial, quantity } = item;
-  console.log(cart)
-  const [newItem, setNewItem] = useState({
-    quantity: quantity,
-    image: image,
-    price: price,
-    name: name,
-    serial: serial,    
-  });
-//   useEffect(() => {
-//     // eslint-disable-next-line
-//   }, [item]);
+  console.log(cart);
+
+  useEffect(() => {
+    if (quantity === 0) {
+      deleteCartItem({ ...item });
+    }
+    // eslint-disable-next-line
+  }, [item, quantity]);
 
   const onChange = (e) => {
     e.preventDefault();
-    if (parseInt(e.target.value) === 0) {
-      console.log("yes its 0");
-    }
-    // setCurrent({...newItem})
-    // setContact({ ...contact, [e.target.name]: e.target.value })
-    setCart({ ...item, quantity: e.target.value });
-    // getTotal(cart.reduce((r, d) => r + d.price * d.quantity, 0))
-    // setNewItem({ ...item, [e.target.name]: e.target.value });
-    // console.log(item);
-
-    // getTotal()
+    const reg = /^[0-9\b]+$/;
+    if (e.target.value === '' || reg.test(e.target.value)) {
+        if (parseInt(e.target.value) === 0) {
+            deleteCartItem({ ...item });
+          }
+          setCart({ ...item, quantity: e.target.value });
+     }
+    
   };
   const increment = () => {
-
     setCart({ ...item, quantity: item.quantity + 1 });
-    // setNewItem({ ...item, quantity: newItem.quantity + 1});
-    // console.log(cart);
-
-    // getTotal(...cart)
   };
 
   const decrement = () => {
-    if (item.quantity === 0) {
-      console.log("yes its 0");
-    }
-    // setNewItem({ ...newItem, quantity: newItem.quantity - 1 });
+    if (quantity === 0) {
+        deleteCartItem({ ...item });
+      }
     setCart({ ...item, quantity: item.quantity - 1 });
-    console.log(cart);
-
-    // getTotal(cart.reduce((r, d) => r + d.price * d.quantity, 0))
-    // getTotal(cart.reduce((r, d) => r + d.price * d.quantity, 0))
   };
 
   const deleteItem = () => {
-    // setNewItem({ ...newItem, quantity: newItem.quantity - 1 });
-    setCart({ ...item });
+    deleteCartItem({ ...item });
     // getTotal(cart.reduce((r, d) => r + d.price * d.quantity, 0))
   };
 
