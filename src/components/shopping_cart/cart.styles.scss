@@ -3,7 +3,7 @@
 }
 
 .title__box{
-    padding-left: 3rem;
+    // padding-left: 3rem;
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -12,8 +12,11 @@
 }
 .cart__footer{
     display: grid;
-    
-    padding-left: 3rem;
+    grid-template-columns: .9fr .1fr;
+
+    // padding-right: 3rem;
+
+    // padding-left: 3rem;
 }
 .icon__box{
     display: grid;
@@ -27,7 +30,9 @@
 .total{
     align-items: center;
     display: grid;
+    justify-content: end;
     grid-template-columns: .1fr .1fr;
+    // padding-right: 3rem;
     &-title{
         font-size: .8rem;
         font-weight: bold;

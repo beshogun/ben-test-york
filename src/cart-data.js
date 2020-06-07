@@ -14,14 +14,14 @@ const CartData = [
     name: "Salco Chinos",
     price: 199,
     quantity: 1,
-    serial: 442341,
+    serial: 442342,
     image: Chinos,
   },
   {
     name: "Rock Chelsea Boot",
     price: 199,
     quantity: 1,
-    serial: 442341,
+    serial: 442343,
     image: Boot,
   },
 ];

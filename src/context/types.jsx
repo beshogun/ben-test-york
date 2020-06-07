@@ -1,0 +1,7 @@
+export const ON_CHANGE = 'ON_CHANGE'
+export const INCREASE_CART_QUANTITY = 'INCREASE_CART_QUANTITY';
+export const REDUCE_CART_QUANTITY = 'REDUCE_CART_QUANTITY';
+export const DELETE_CART_ITEM = 'DELETE_CART_ITEM';
+export const SET_CART = 'ON_CHANGE';
+export const SET_CURRENT = 'SET_CURRENT';
+export const GET_TOTAL = 'GET_TOTAL';
